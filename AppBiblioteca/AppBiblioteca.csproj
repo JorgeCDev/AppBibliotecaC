@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vista\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -85,6 +86,78 @@
     <Folder Include="Modelo\" />
     <Folder Include="Negocio\" />
     <Folder Include="Persistencia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_search_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_find_in_page_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_person_search_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_libraryG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_close_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\2x\baseline_disabled_by_default_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_add_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_addchart_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_analytics_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_assignment_return_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_close_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_contact_support_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_disabled_by_default_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_find_in_page_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_help_outline_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_library_add_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_library_books_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_menu_book_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_menuP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_person_add_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_person_search_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\baseline_search_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\lupaP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1x\MenuP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
