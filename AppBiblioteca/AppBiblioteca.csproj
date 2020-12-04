@@ -50,6 +50,24 @@
     <Compile Include="Recursos\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Vista\DlgAltaLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DlgAltaLibros.Designer.cs">
+      <DependentUpon>DlgAltaLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DlgAltasUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DlgAltasUsuarios.Designer.cs">
+      <DependentUpon>DlgAltasUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DlgAumentarExistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DlgAumentarExistencias.Designer.cs">
+      <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +84,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\DlgAltaLibros.resx">
+      <DependentUpon>DlgAltaLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DlgAltasUsuarios.resx">
+      <DependentUpon>DlgAltasUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DlgAumentarExistencias.resx">
+      <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
