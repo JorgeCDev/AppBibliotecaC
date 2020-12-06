@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistencia\AdmLibros.cs" />
+    <Compile Include="Persistencia\AdmUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursos\GradientPanel.cs">
@@ -74,6 +76,42 @@
     <Compile Include="Vista\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Temp\FormAltaLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormAltaLibro.designer.cs">
+      <DependentUpon>FormAltaLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Temp\FormAltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormAltaUsuario.designer.cs">
+      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Temp\FormAumentarExistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormAumentarExistencia.designer.cs">
+      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Temp\FormBusquedaLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormBusquedaLibro.designer.cs">
+      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Temp\FormInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormInventario.designer.cs">
+      <DependentUpon>FormInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Temp\FormReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Temp\FormReporteUsuarios.designer.cs">
+      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +134,24 @@
     <EmbeddedResource Include="Vista\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormAltaLibro.resx">
+      <DependentUpon>FormAltaLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormAltaUsuario.resx">
+      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormAumentarExistencia.resx">
+      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormBusquedaLibro.resx">
+      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormInventario.resx">
+      <DependentUpon>FormInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Temp\FormReporteUsuarios.resx">
+      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,7 +168,6 @@
   <ItemGroup>
     <Folder Include="Modelo\" />
     <Folder Include="Negocio\" />
-    <Folder Include="Persistencia\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\2x\baseline_search_black_18dp.png" />

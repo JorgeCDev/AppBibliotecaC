@@ -35,11 +35,18 @@
             this.menuDosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.altasUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aumentarExistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.morososToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestamoLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devolucionLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gradientPanel4 = new AppBiblioteca.Recursos.GradientPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,13 +60,6 @@
             this.gradientPanel1 = new AppBiblioteca.Recursos.GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestamoLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devolucionLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnMenuBar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.gradientPanel4.SuspendLayout();
@@ -87,6 +87,7 @@
             this.mnMenuBar.Size = new System.Drawing.Size(784, 44);
             this.mnMenuBar.TabIndex = 0;
             this.mnMenuBar.Text = "menuStrip1";
+            this.mnMenuBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnMenuBar_ItemClicked);
             // 
             // menuToolStripMenuItem
             // 
@@ -132,6 +133,7 @@
             this.altasUsuariosToolStripMenuItem.Name = "altasUsuariosToolStripMenuItem";
             this.altasUsuariosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.altasUsuariosToolStripMenuItem.Text = "Altas Usuarios";
+            this.altasUsuariosToolStripMenuItem.Click += new System.EventHandler(this.altasUsuariosToolStripMenuItem_Click);
             // 
             // altaLibrosToolStripMenuItem
             // 
@@ -139,6 +141,12 @@
             this.altaLibrosToolStripMenuItem.Name = "altaLibrosToolStripMenuItem";
             this.altaLibrosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.altaLibrosToolStripMenuItem.Text = "Alta Libros";
+            this.altaLibrosToolStripMenuItem.Click += new System.EventHandler(this.altaLibrosToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
             // 
             // aumentarExistenciaToolStripMenuItem
             // 
@@ -146,6 +154,7 @@
             this.aumentarExistenciaToolStripMenuItem.Name = "aumentarExistenciaToolStripMenuItem";
             this.aumentarExistenciaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.aumentarExistenciaToolStripMenuItem.Text = "Aumentar Existencia";
+            this.aumentarExistenciaToolStripMenuItem.Click += new System.EventHandler(this.aumentarExistenciaToolStripMenuItem_Click);
             // 
             // morososToolStripMenuItem
             // 
@@ -153,6 +162,7 @@
             this.morososToolStripMenuItem.Name = "morososToolStripMenuItem";
             this.morososToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.morososToolStripMenuItem.Text = "Morosos";
+            this.morososToolStripMenuItem.Click += new System.EventHandler(this.morososToolStripMenuItem_Click);
             // 
             // menuTresToolStripMenuItem
             // 
@@ -168,6 +178,30 @@
             this.menuTresToolStripMenuItem.Text = "Consultas";
             this.menuTresToolStripMenuItem.Click += new System.EventHandler(this.menuTresToolStripMenuItem_Click);
             // 
+            // busquedaToolStripMenuItem
+            // 
+            this.busquedaToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_search_black_18dp1;
+            this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
+            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.busquedaToolStripMenuItem.Text = "Busqueda";
+            this.busquedaToolStripMenuItem.Click += new System.EventHandler(this.busquedaToolStripMenuItem_Click);
+            // 
+            // reporteUsuariosToolStripMenuItem
+            // 
+            this.reporteUsuariosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_person_search_black_18dp1;
+            this.reporteUsuariosToolStripMenuItem.Name = "reporteUsuariosToolStripMenuItem";
+            this.reporteUsuariosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.reporteUsuariosToolStripMenuItem.Text = "Reporte Usuarios";
+            this.reporteUsuariosToolStripMenuItem.Click += new System.EventHandler(this.reporteUsuariosToolStripMenuItem_Click);
+            // 
+            // inventarioToolStripMenuItem
+            // 
+            this.inventarioToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_find_in_page_black_18dp1;
+            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.inventarioToolStripMenuItem.Text = "Inventario";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
+            // 
             // librosToolStripMenuItem
             // 
             this.librosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -179,6 +213,22 @@
             this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
             this.librosToolStripMenuItem.Size = new System.Drawing.Size(90, 40);
             this.librosToolStripMenuItem.Text = "Libros";
+            // 
+            // prestamoLibrosToolStripMenuItem
+            // 
+            this.prestamoLibrosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_library_books_black_18dp;
+            this.prestamoLibrosToolStripMenuItem.Name = "prestamoLibrosToolStripMenuItem";
+            this.prestamoLibrosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.prestamoLibrosToolStripMenuItem.Text = "Prestamo Libros";
+            this.prestamoLibrosToolStripMenuItem.Click += new System.EventHandler(this.prestamoLibrosToolStripMenuItem_Click);
+            // 
+            // devolucionLibrosToolStripMenuItem
+            // 
+            this.devolucionLibrosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_assignment_return_black_18dp;
+            this.devolucionLibrosToolStripMenuItem.Name = "devolucionLibrosToolStripMenuItem";
+            this.devolucionLibrosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.devolucionLibrosToolStripMenuItem.Text = "Devolucion Libros";
+            this.devolucionLibrosToolStripMenuItem.Click += new System.EventHandler(this.devolucionLibrosToolStripMenuItem_Click);
             // 
             // acercaToolStripMenuItem
             // 
@@ -193,6 +243,14 @@
             this.acercaToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.acercaToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
             this.acercaToolStripMenuItem.Text = "Acerca";
+            // 
+            // acercaToolStripMenuItem1
+            // 
+            this.acercaToolStripMenuItem1.Image = global::AppBiblioteca.Properties.Resources.baseline_contact_support_black_18dp;
+            this.acercaToolStripMenuItem1.Name = "acercaToolStripMenuItem1";
+            this.acercaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.acercaToolStripMenuItem1.Text = "Acerca";
+            this.acercaToolStripMenuItem1.Click += new System.EventHandler(this.acercaToolStripMenuItem1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -341,53 +399,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
-            // 
-            // busquedaToolStripMenuItem
-            // 
-            this.busquedaToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_search_black_18dp1;
-            this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
-            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.busquedaToolStripMenuItem.Text = "Busqueda";
-            // 
-            // reporteUsuariosToolStripMenuItem
-            // 
-            this.reporteUsuariosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_person_search_black_18dp1;
-            this.reporteUsuariosToolStripMenuItem.Name = "reporteUsuariosToolStripMenuItem";
-            this.reporteUsuariosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.reporteUsuariosToolStripMenuItem.Text = "Reporte Usuarios";
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_find_in_page_black_18dp1;
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.inventarioToolStripMenuItem.Text = "Inventario";
-            // 
-            // prestamoLibrosToolStripMenuItem
-            // 
-            this.prestamoLibrosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_library_books_black_18dp;
-            this.prestamoLibrosToolStripMenuItem.Name = "prestamoLibrosToolStripMenuItem";
-            this.prestamoLibrosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.prestamoLibrosToolStripMenuItem.Text = "Prestamo Libros";
-            // 
-            // devolucionLibrosToolStripMenuItem
-            // 
-            this.devolucionLibrosToolStripMenuItem.Image = global::AppBiblioteca.Properties.Resources.baseline_assignment_return_black_18dp;
-            this.devolucionLibrosToolStripMenuItem.Name = "devolucionLibrosToolStripMenuItem";
-            this.devolucionLibrosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.devolucionLibrosToolStripMenuItem.Text = "Devolucion Libros";
-            // 
-            // acercaToolStripMenuItem1
-            // 
-            this.acercaToolStripMenuItem1.Image = global::AppBiblioteca.Properties.Resources.baseline_contact_support_black_18dp;
-            this.acercaToolStripMenuItem1.Name = "acercaToolStripMenuItem1";
-            this.acercaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.acercaToolStripMenuItem1.Text = "Acerca";
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +411,7 @@
             this.MainMenuStrip = this.mnMenuBar;
             this.Name = "Menu";
             this.Text = "App Biblioteca";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.mnMenuBar.ResumeLayout(false);
             this.mnMenuBar.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
