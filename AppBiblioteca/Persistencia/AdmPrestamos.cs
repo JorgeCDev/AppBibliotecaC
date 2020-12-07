@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using AppBiblioteca.Modelo;
+using System.Data;
 
 namespace AppBiblioteca.Persistencia
 {
@@ -47,6 +48,27 @@ namespace AppBiblioteca.Persistencia
             cmd.ExecuteNonQuery();
 
             con.Close();
+
+
+        }
+
+        public DataTable PrestamosUsuario(string id,SqlConnection con)
+        {
+            string query = "SELECT Prestamo.PrestamoID as ID, Usuario.Nombre+' '+Usuario.ApePaterno+' '+Usuario.ApeMaterno as Nombre, Libro.Libro, Prestamo.FechaPrestamo as Fecha,DATEDIFF(dd,Prestamo.FechaPrestamo,GETDATE()) AS Transcurridos FROM Prestamo " +
+                "inner join Usuario on Usuario.UsuarioID = Prestamo.UsuarioID "+
+                "inner join Libro on Libro.LibroID = Prestamo.LibroID " +
+                "WHERE Prestamo.UsuarioID = " + id;
+            
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable Libro = new DataTable();
+            da.Fill(Libro);
+            con.Close();
+
+            return Libro;
 
 
         }

@@ -23,21 +23,6 @@ namespace AppBiblioteca
             con = new SqlConnection(ConnectionString);
         }
 
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-                    
-        }
-
-        private void menuDosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuTresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menuDosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (System.Windows.Forms.Application.MessageLoop)
@@ -127,6 +112,8 @@ namespace AppBiblioteca
 
         private void devolucionLibrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormDevolverLibros frmDev = new FormDevolverLibros(con);
+            frmDev.ShowDialog();
 
         }
 

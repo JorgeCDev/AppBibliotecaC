@@ -44,9 +44,12 @@
             // 
             // dgvLibros
             // 
+            this.dgvLibros.AllowUserToAddRows = false;
+            this.dgvLibros.AllowUserToDeleteRows = false;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLibros.Location = new System.Drawing.Point(12, 115);
             this.dgvLibros.Name = "dgvLibros";
+            this.dgvLibros.ReadOnly = true;
             this.dgvLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLibros.Size = new System.Drawing.Size(637, 281);
             this.dgvLibros.TabIndex = 0;

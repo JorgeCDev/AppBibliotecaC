@@ -100,7 +100,6 @@
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(97, 40);
             this.menuToolStripMenuItem.Text = "Archivo";
-            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // menuDosToolStripMenuItem
             // 
@@ -125,7 +124,6 @@
             this.menuDosToolStripMenuItem1.Name = "menuDosToolStripMenuItem1";
             this.menuDosToolStripMenuItem1.Size = new System.Drawing.Size(99, 40);
             this.menuDosToolStripMenuItem1.Text = "Gestion";
-            this.menuDosToolStripMenuItem1.Click += new System.EventHandler(this.menuDosToolStripMenuItem1_Click);
             // 
             // altasUsuariosToolStripMenuItem
             // 
@@ -176,7 +174,6 @@
             this.menuTresToolStripMenuItem.Name = "menuTresToolStripMenuItem";
             this.menuTresToolStripMenuItem.Size = new System.Drawing.Size(112, 40);
             this.menuTresToolStripMenuItem.Text = "Consultas";
-            this.menuTresToolStripMenuItem.Click += new System.EventHandler(this.menuTresToolStripMenuItem_Click);
             // 
             // busquedaToolStripMenuItem
             // 

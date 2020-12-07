@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using AppBiblioteca.Persistencia;
 
-namespace Biblioteca.Libros
+namespace AppBiblioteca.Vista
 {
     public partial class FormAltaLibro : Form
     {
@@ -203,6 +204,11 @@ namespace Biblioteca.Libros
             {
                 e.Handled = true;
             }
+        }
+
+        private void FormAltaLibro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

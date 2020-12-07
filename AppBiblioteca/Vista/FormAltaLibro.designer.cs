@@ -1,4 +1,4 @@
-﻿namespace Biblioteca.Libros
+﻿namespace AppBiblioteca.Vista
 {
     partial class FormAltaLibro
     {
@@ -219,7 +219,9 @@
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAltaLibro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta de Libros";
+            this.Load += new System.EventHandler(this.FormAltaLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);

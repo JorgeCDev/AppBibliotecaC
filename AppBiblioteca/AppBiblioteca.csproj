@@ -55,23 +55,41 @@
     <Compile Include="Recursos\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Vista\DlgAltaLibros.cs">
+    <Compile Include="Vista\FormAltaLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\DlgAltaLibros.Designer.cs">
-      <DependentUpon>DlgAltaLibros.cs</DependentUpon>
+    <Compile Include="Vista\FormAltaLibro.designer.cs">
+      <DependentUpon>FormAltaLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\DlgAltasUsuarios.cs">
+    <Compile Include="Vista\FormAltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\DlgAltasUsuarios.Designer.cs">
-      <DependentUpon>DlgAltasUsuarios.cs</DependentUpon>
+    <Compile Include="Vista\FormAltaUsuario.designer.cs">
+      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\DlgAumentarExistencias.cs">
+    <Compile Include="Vista\FormAumentarExistencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\DlgAumentarExistencias.Designer.cs">
-      <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
+    <Compile Include="Vista\FormAumentarExistencia.designer.cs">
+      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormBusquedaLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormBusquedaLibro.designer.cs">
+      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormDevolverLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormDevolverLibros.Designer.cs">
+      <DependentUpon>FormDevolverLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormInventario.designer.cs">
+      <DependentUpon>FormInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormMorosos.cs">
       <SubType>Form</SubType>
@@ -85,47 +103,17 @@
     <Compile Include="Vista\FormPrestamoLibros.Designer.cs">
       <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReporteUsuarios.designer.cs">
+      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAltaLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAltaLibro.designer.cs">
-      <DependentUpon>FormAltaLibro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAltaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAltaUsuario.designer.cs">
-      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAumentarExistencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormAumentarExistencia.designer.cs">
-      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormBusquedaLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormBusquedaLibro.designer.cs">
-      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormInventario.designer.cs">
-      <DependentUpon>FormInventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Temp\FormReporteUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Temp\FormReporteUsuarios.designer.cs">
-      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,14 +125,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\DlgAltaLibros.resx">
-      <DependentUpon>DlgAltaLibros.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FormAltaLibro.resx">
+      <DependentUpon>FormAltaLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\DlgAltasUsuarios.resx">
-      <DependentUpon>DlgAltasUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FormAltaUsuario.resx">
+      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\DlgAumentarExistencias.resx">
-      <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FormAumentarExistencia.resx">
+      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormBusquedaLibro.resx">
+      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormDevolverLibros.resx">
+      <DependentUpon>FormDevolverLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormInventario.resx">
+      <DependentUpon>FormInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormMorosos.resx">
       <DependentUpon>FormMorosos.cs</DependentUpon>
@@ -152,26 +149,11 @@
     <EmbeddedResource Include="Vista\FormPrestamoLibros.resx">
       <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReporteUsuarios.resx">
+      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormAltaLibro.resx">
-      <DependentUpon>FormAltaLibro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormAltaUsuario.resx">
-      <DependentUpon>FormAltaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormAumentarExistencia.resx">
-      <DependentUpon>FormAumentarExistencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormBusquedaLibro.resx">
-      <DependentUpon>FormBusquedaLibro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormInventario.resx">
-      <DependentUpon>FormInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Temp\FormReporteUsuarios.resx">
-      <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
