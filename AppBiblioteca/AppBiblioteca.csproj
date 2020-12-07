@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\Prestamo.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Persistencia\AdmLibros.cs" />
+    <Compile Include="Persistencia\AdmPrestamos.cs" />
     <Compile Include="Persistencia\AdmUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +72,18 @@
     </Compile>
     <Compile Include="Vista\DlgAumentarExistencias.Designer.cs">
       <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormMorosos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormMorosos.Designer.cs">
+      <DependentUpon>FormMorosos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormPrestamoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPrestamoLibros.Designer.cs">
+      <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Menu.cs">
       <SubType>Form</SubType>
@@ -131,6 +146,12 @@
     <EmbeddedResource Include="Vista\DlgAumentarExistencias.resx">
       <DependentUpon>DlgAumentarExistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormMorosos.resx">
+      <DependentUpon>FormMorosos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPrestamoLibros.resx">
+      <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,10 +186,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelo\" />
-    <Folder Include="Negocio\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Recursos\2x\baseline_search_black_18dp.png" />
   </ItemGroup>

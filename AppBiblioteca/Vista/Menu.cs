@@ -97,7 +97,8 @@ namespace AppBiblioteca
 
         private void morososToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormMorosos frmMor = new FormMorosos(con);
+            frmMor.ShowDialog();
         }
 
         private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +121,8 @@ namespace AppBiblioteca
 
         private void prestamoLibrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormPrestamoLibros frmPrest = new FormPrestamoLibros(con);
+            frmPrest.ShowDialog();
         }
 
         private void devolucionLibrosToolStripMenuItem_Click(object sender, EventArgs e)

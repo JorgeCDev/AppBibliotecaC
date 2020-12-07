@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using AppBiblioteca.Modelo;
 
 namespace AppBiblioteca.Persistencia
 {
@@ -240,5 +241,39 @@ namespace AppBiblioteca.Persistencia
 
             return busqueda;
         }
+
+        public DataTable ObtenerTablaExistencia(SqlConnection conexion)
+        {
+            string query = "Select LibroID, Libro,Autor, EditorialID,FechaPublicado,LibrosDisponibles FROM Libro WHERE LibrosDisponibles>0";
+            conexion.Open();
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable Libro = new DataTable();
+            da.Fill(Libro);
+            conexion.Close();
+
+            return Libro;
+        }
+
+        public void UpdateExistencia(bool sumar,string id, SqlConnection con)
+        {
+
+            int exist = sumar ? 1 : -1;
+            string query = "UPDATE [dbo].[Libro] SET [LibrosDisponibles]=[LibrosDisponibles]+@exist  WHERE LibroID = " + id;
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@exist", exist);
+
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+        }
+
+
     }
 }

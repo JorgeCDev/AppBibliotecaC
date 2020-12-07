@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using AppBiblioteca.Modelo;
 
 namespace AppBiblioteca.Persistencia
 {
@@ -116,6 +117,115 @@ namespace AppBiblioteca.Persistencia
 
             return dtbuscar;
         }
+
+        public DataTable ObtenerTablaMorosos(SqlConnection conexion)
+        {
+
+
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand("select UsuarioID,Nombre,ApePaterno,ApeMaterno,CiudadID,TipoUsuarioID,Moroso from Usuario WHERE Moroso=1 ", conexion);
+
+            //SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dtMorosos = new DataTable();
+            da.Fill(dtMorosos);
+            conexion.Close();
+            dtMorosos.Columns["UsuarioID"].ColumnName = "ID";
+            dtMorosos.Columns["ApePaterno"].ColumnName = "Paterno";
+            dtMorosos.Columns["ApeMaterno"].ColumnName = "Materno";
+            dtMorosos.Columns["CiudadID"].ColumnName = "ID Ciudad";
+            dtMorosos.Columns["TipoUsuarioID"].ColumnName = "Tipo";
+
+
+
+            return dtMorosos;
+        }
+
+        public void UpdateMoroso(string usuario,SqlConnection con)
+        {
+            int bit = 0;
+            
+            string query ="update Usuario set Moroso = @mora where UsuarioID ="+usuario;
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@mora", bit);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+               
+            }
+            catch(SqlException ex)
+            {
+                Errores = ex;
+                con.Close();
+            }
+            con.Close();
+
+
+        }
+
+        public string NombreUsuario(string id, SqlConnection con)
+        {
+
+            string strComando = "SELECT Nombre+' '+ApePaterno+' '+ApeMaterno FROM Usuario WHERE UsuarioID = " + id;
+            con.Open();
+            SqlCommand comando = new SqlCommand(strComando, con);
+            string Nombre = comando.ExecuteScalar().ToString();
+            con.Close();
+
+            return Nombre;
+        }
+
+        public bool isMoroso(string id, SqlConnection con)
+        {
+
+            string strComando = "SELECT Moroso FROM Usuario WHERE UsuarioID = " + id;
+            con.Open();
+            SqlCommand comando = new SqlCommand(strComando, con);
+            string bit = comando.ExecuteScalar().ToString();
+            con.Close();
+
+            return bit.Equals("1") ? true:false;
+        }
+
+        public Usuario GetUsuario(string id,SqlConnection con)
+        {
+
+            Usuario user = new Usuario();
+            string query = "select UsuarioID,Nombre,ApePaterno,ApeMaterno,CiudadID,TipoUsuarioID,Moroso from Usuario WHERE UsuarioID = " + id;
+  
+            try
+            {
+                con.Open();
+        
+                SqlCommand comando = new SqlCommand(query, con);
+                SqlDataReader datos = comando.ExecuteReader();
+
+                while (datos.Read())
+                {
+                    user.ID = Convert.ToInt32( datos["UsuarioID"]);
+                    user.Nom = datos["Nombre"].ToString();
+                    user.Paterno = datos["ApePaterno"].ToString();
+                    user.Materno = datos["ApeMaterno"].ToString();
+                    user.Ciudad = Convert.ToInt32(datos["CiudadID"].ToString());
+                    user.TipoUsuario = Convert.ToInt32(datos["TipoUsuarioID"].ToString());
+                    user.Mora = Convert.ToBoolean(datos["Moroso"]);
+
+                }
+                con.Close();
+            }
+            catch (SqlException exc)
+            {
+                Errores = exc;
+                con.Close();
+            }
+
+            return user;
+                
+        }
+
+      
 
     }
 }
