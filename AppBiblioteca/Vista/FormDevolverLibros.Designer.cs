@@ -66,7 +66,7 @@
             this.btnDevolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.btnDevolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevolver.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevolver.Location = new System.Drawing.Point(417, 278);
+            this.btnDevolver.Location = new System.Drawing.Point(417, 266);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(128, 36);
             this.btnDevolver.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 338);
+            this.ClientSize = new System.Drawing.Size(557, 316);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkMoroso);
             this.Controls.Add(this.btnDevolver);
@@ -107,6 +107,7 @@
             this.Controls.Add(this.txtID);
             this.Name = "FormDevolverLibros";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Devoluciones";
             this.Load += new System.EventHandler(this.FormDevolverLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion)).EndInit();

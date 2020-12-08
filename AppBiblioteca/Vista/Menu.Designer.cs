@@ -87,7 +87,6 @@
             this.mnMenuBar.Size = new System.Drawing.Size(784, 44);
             this.mnMenuBar.TabIndex = 0;
             this.mnMenuBar.Text = "menuStrip1";
-            this.mnMenuBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnMenuBar_ItemClicked);
             // 
             // menuToolStripMenuItem
             // 
@@ -106,7 +105,7 @@
             this.menuDosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("menuDosToolStripMenuItem.Image")));
             this.menuDosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuDosToolStripMenuItem.Name = "menuDosToolStripMenuItem";
-            this.menuDosToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.menuDosToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
             this.menuDosToolStripMenuItem.Text = "Salir";
             this.menuDosToolStripMenuItem.Click += new System.EventHandler(this.menuDosToolStripMenuItem_Click);
             // 
@@ -245,7 +244,7 @@
             // 
             this.acercaToolStripMenuItem1.Image = global::AppBiblioteca.Properties.Resources.baseline_contact_support_black_18dp;
             this.acercaToolStripMenuItem1.Name = "acercaToolStripMenuItem1";
-            this.acercaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.acercaToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
             this.acercaToolStripMenuItem1.Text = "Acerca";
             this.acercaToolStripMenuItem1.Click += new System.EventHandler(this.acercaToolStripMenuItem1_Click);
             // 
@@ -272,10 +271,12 @@
             this.gradientPanel4.ColorUP = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.gradientPanel4.Controls.Add(this.label4);
             this.gradientPanel4.Controls.Add(this.pictureBox4);
+            this.gradientPanel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gradientPanel4.Location = new System.Drawing.Point(395, 262);
             this.gradientPanel4.Name = "gradientPanel4";
             this.gradientPanel4.Size = new System.Drawing.Size(386, 253);
             this.gradientPanel4.TabIndex = 5;
+            this.gradientPanel4.Click += new System.EventHandler(this.gradientPanel4_Click);
             // 
             // label4
             // 
@@ -297,6 +298,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(37, 38);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // gradientPanel3
             // 
@@ -304,10 +306,12 @@
             this.gradientPanel3.ColorUP = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.gradientPanel3.Controls.Add(this.label3);
             this.gradientPanel3.Controls.Add(this.pictureBox3);
+            this.gradientPanel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gradientPanel3.Location = new System.Drawing.Point(3, 262);
             this.gradientPanel3.Name = "gradientPanel3";
             this.gradientPanel3.Size = new System.Drawing.Size(386, 253);
             this.gradientPanel3.TabIndex = 5;
+            this.gradientPanel3.Click += new System.EventHandler(this.gradientPanel3_Click);
             // 
             // label3
             // 
@@ -329,6 +333,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(37, 38);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // gradientPanel2
             // 
@@ -336,10 +341,12 @@
             this.gradientPanel2.ColorUP = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.gradientPanel2.Controls.Add(this.label2);
             this.gradientPanel2.Controls.Add(this.pictureBox2);
+            this.gradientPanel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gradientPanel2.Location = new System.Drawing.Point(395, 3);
             this.gradientPanel2.Name = "gradientPanel2";
             this.gradientPanel2.Size = new System.Drawing.Size(386, 253);
             this.gradientPanel2.TabIndex = 5;
+            this.gradientPanel2.Click += new System.EventHandler(this.gradientPanel2_Click);
             // 
             // label2
             // 
@@ -361,6 +368,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(37, 38);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // gradientPanel1
             // 
@@ -368,10 +376,12 @@
             this.gradientPanel1.ColorUP = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gradientPanel1.Location = new System.Drawing.Point(3, 3);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(386, 253);
             this.gradientPanel1.TabIndex = 4;
+            this.gradientPanel1.Click += new System.EventHandler(this.gradientPanel1_Click);
             // 
             // label1
             // 
@@ -395,6 +405,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Menu
             // 
@@ -407,8 +418,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnMenuBar;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "App Biblioteca";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.mnMenuBar.ResumeLayout(false);
             this.mnMenuBar.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -64,11 +64,31 @@ namespace AppBiblioteca.Persistencia
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable Libro = new DataTable();
-            da.Fill(Libro);
+            DataTable Prestamos = new DataTable();
+            da.Fill(Prestamos);
             con.Close();
 
-            return Libro;
+            return Prestamos;
+
+
+        }
+
+        public DataTable ReportePrestamos(SqlConnection con)
+        {
+            string query = "SELECT Prestamo.PrestamoID as ID, Usuario.Nombre+' '+Usuario.ApePaterno+' '+Usuario.ApeMaterno as Nombre, Libro.Libro, Prestamo.FechaPrestamo as Fecha,DATEDIFF(dd,Prestamo.FechaPrestamo,GETDATE()) AS Transcurridos FROM Prestamo " +
+                "inner join Usuario on Usuario.UsuarioID = Prestamo.UsuarioID " +
+                "inner join Libro on Libro.LibroID = Prestamo.LibroID ";
+
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable Prestamos = new DataTable();
+            da.Fill(Prestamos);
+            con.Close();
+
+            return Prestamos;
 
 
         }

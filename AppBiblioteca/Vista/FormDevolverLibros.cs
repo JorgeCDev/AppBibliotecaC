@@ -65,8 +65,6 @@ namespace AppBiblioteca.Vista
             if (!txtID.Text.Equals(""))
             {
 
-            
-
             if (chkMoroso.Checked)
             {
                 new AdmUsuario().UpdateMoroso(true,txtID.Text,con);

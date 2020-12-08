@@ -32,35 +32,6 @@ namespace AppBiblioteca
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mnMenuBar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void altasUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -119,7 +90,57 @@ namespace AppBiblioteca
 
         private void acercaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Acerca acerca = new Acerca();
+            acerca.ShowDialog();
 
+        }
+
+        private void gradientPanel1_Click(object sender, EventArgs e)
+        {
+            FormInventario frmInven = new FormInventario(con);
+            frmInven.ShowDialog();
+        }
+
+        private void gradientPanel2_Click(object sender, EventArgs e)
+        {
+            FormReporteUsuarios frmUsu = new FormReporteUsuarios(con);
+            frmUsu.ShowDialog();
+        }
+
+        private void gradientPanel4_Click(object sender, EventArgs e)
+        {
+            FormMorosos frmMorosos = new FormMorosos(con);
+            frmMorosos.ShowDialog();
+        }
+
+        private void gradientPanel3_Click(object sender, EventArgs e)
+        {
+            FormReportePrestamos formRP = new FormReportePrestamos(con);
+            formRP.ShowDialog();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FormReporteUsuarios frmUsu = new FormReporteUsuarios(con);
+            frmUsu.ShowDialog();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FormReportePrestamos formRP = new FormReportePrestamos(con);
+            formRP.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FormMorosos frmMorosos = new FormMorosos(con);
+            frmMorosos.ShowDialog();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            FormInventario frmInven = new FormInventario(con);
+            frmInven.ShowDialog();
         }
     }
 }

@@ -55,6 +55,12 @@
     <Compile Include="Recursos\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Vista\Acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Acerca.Designer.cs">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormAltaLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     <Compile Include="Vista\FormPrestamoLibros.Designer.cs">
       <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormReportePrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReportePrestamos.Designer.cs">
+      <DependentUpon>FormReportePrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormReporteUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\Acerca.resx">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormAltaLibro.resx">
       <DependentUpon>FormAltaLibro.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormPrestamoLibros.resx">
       <DependentUpon>FormPrestamoLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReportePrestamos.resx">
+      <DependentUpon>FormReportePrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormReporteUsuarios.resx">
       <DependentUpon>FormReporteUsuarios.cs</DependentUpon>
