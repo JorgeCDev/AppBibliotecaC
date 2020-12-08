@@ -141,9 +141,9 @@ namespace AppBiblioteca.Persistencia
             return dtMorosos;
         }
 
-        public void UpdateMoroso(string usuario,SqlConnection con)
+        public void UpdateMoroso(bool moroso,string usuario,SqlConnection con)
         {
-            int bit = 0;
+            int bit = moroso ? 1:0;
             
             string query ="update Usuario set Moroso = @mora where UsuarioID ="+usuario;
 

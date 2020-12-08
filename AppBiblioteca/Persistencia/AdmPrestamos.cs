@@ -73,8 +73,23 @@ namespace AppBiblioteca.Persistencia
 
         }
 
+        public void QuitaPrestamo(string prestamoID, SqlConnection con)
+        {
+            string query = "DELETE FROM [dbo].[Prestamo] WHERE PrestamoID = "+prestamoID;
 
 
-        
+           SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+
+        }
+
+
+
+
     }
 }

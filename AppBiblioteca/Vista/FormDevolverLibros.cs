@@ -35,13 +35,52 @@ namespace AppBiblioteca.Vista
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Keys.Enter==(Keys)e.KeyChar)
+            if (char.IsLetter(e.KeyChar) & (Keys)char.ToUpper(e.KeyChar) != Keys.Back & (Keys)char.ToUpper(e.KeyChar) != Keys.Space)
             {
-                if (!string.IsNullOrEmpty(txtID.Text)|!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+            }
+       
+            if (Keys.Enter==(Keys)e.KeyChar&!txtID.Text.Equals(""))
+            {
+                if (!char.IsDigit(e.KeyChar))
                 {
                     FillTable(txtID.Text);
                 }
                 
+            }
+        }
+
+
+        public void limpiar()
+        {
+
+            txtID.Text = "";
+            chkMoroso.Checked = false;
+            dgvDevolucion.DataSource=null;
+            
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            if (!txtID.Text.Equals(""))
+            {
+
+            
+
+            if (chkMoroso.Checked)
+            {
+                new AdmUsuario().UpdateMoroso(true,txtID.Text,con);
+                string prestamo = dgvDevolucion.SelectedCells[0].Value.ToString();
+                new AdmPrestamos().QuitaPrestamo(prestamo,con);
+                limpiar();
+
+            }
+            else
+            {
+                string prestamo = dgvDevolucion.SelectedCells[0].Value.ToString();
+                new AdmPrestamos().QuitaPrestamo(prestamo, con);
+                limpiar();
+            }
             }
         }
     }

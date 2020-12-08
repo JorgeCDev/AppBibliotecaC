@@ -34,7 +34,7 @@ namespace AppBiblioteca.Vista
             if (dgvMorosos.SelectedRows.Count > 0)
             {
                 string usuario = dgvMorosos.SelectedCells[0].Value.ToString();
-                new AdmUsuario().UpdateMoroso(usuario, con);
+                new AdmUsuario().UpdateMoroso(false,usuario, con);
                 FillTable();
             }
        
